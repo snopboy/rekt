@@ -1,0 +1,21 @@
+{
+	"name": "snopboy/rekt",
+	"version": "0.0.1",
+
+	"require": {
+		"php": ">=5.6",
+		"symfony/class-loader": "2.1.*",
+		"symfony/http-foundation": "2.1.*",
+		"symfony/routing": "2.1.*",
+		"symfony/http-kernel": "2.1.*",
+		"symfony/event-dispatcher": "2.1.*",
+        "symfony/dependency-injection": "2.1.*",
+		"monolog/monolog": "^1.19"
+	},
+	"autoload": {
+		"psr-4": {
+			"System\\": "System/",
+			"Application\\": "Application/"
+		}
+	}
+}
