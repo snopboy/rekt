@@ -1,3 +1,7 @@
 .idea
 composer.lock
 composer.phar
+vendor/
+!vendor/.gitkeep
+Storage/
+!Storage/logs/.gitkeep

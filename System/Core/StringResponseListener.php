@@ -14,7 +14,7 @@ class StringResponseListener implements EventSubscriberInterface {
 		$response = $event->getControllerResult();
 
 		if (is_string($response)) {
-			$event->setResponse(new Response($response));
+			$event->setResponse($symfonyResponse = new Response($response));
 		}
 		//
 		// Not needed for now, Symfony has out-of-the-box support for JSON responses.
@@ -22,6 +22,7 @@ class StringResponseListener implements EventSubscriberInterface {
 		//
 		/*elseif (is_array($response) || is_object($response)) {
 			$event->setResponse(new JsonResponse($response));
+			$symfonyResponse->headers->set('Content-Type', 'application/json');
 		}
 		else {
 			die(1,

@@ -4,12 +4,12 @@
 
 	"require": {
 		"php": ">=5.6",
-		"symfony/class-loader": "2.1.*",
-		"symfony/http-foundation": "2.1.*",
-		"symfony/routing": "2.1.*",
-		"symfony/http-kernel": "2.1.*",
-		"symfony/event-dispatcher": "2.1.*",
-        "symfony/dependency-injection": "2.1.*",
+		"symfony/class-loader": "3.1.*",
+		"symfony/http-foundation": "3.1.*",
+		"symfony/routing": "3.1.*",
+		"symfony/http-kernel": "3.1.*",
+		"symfony/event-dispatcher": "3.1.*",
+        "symfony/dependency-injection": "3.1.*",
 		"monolog/monolog": "^1.19"
 	},
 	"autoload": {

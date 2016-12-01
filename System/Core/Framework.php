@@ -32,8 +32,14 @@ class Framework
         $this->_storage['root'] = $this->container->getParameter('path.storage');
 
         //$this->kernel = new Kernel($this->dispatcher, $this->resolver);
+        $this->container->register('resolver.argument', 'Symfony\Component\HttpKernel\Controller\ArgumentResolver');
         $this->container->register('kernel', 'System\Core\Http\Kernel')
-        	->setArguments(array(new Reference('dispatcher'), new Reference('resolver')))
+        	->setArguments(array(
+                new Reference('dispatcher'),
+                new Reference('resolver'),
+                new Reference('request.stack'),
+                new Reference('resolver.argument')
+            ))
         ;
         $this->kernel = $this->container->get('kernel');
     }
